@@ -49,117 +49,47 @@ Differential amplifier is one of the fundamental building blocks of analog circu
 ## Reference Circuit Details-
 
 
-The circuit in Fig. 1 is a conventional CMOS differential amplifier used in analog circuits. The circuit is used to provide a voltage gain, which heavily depends on the output resistance of both PMOS and NMOS transistors. The output resistance in turn depends on channel length of MOSFET’s. The gain equation of the differential amplifier in Fig. 1 can be written as
-                     AV =gm1,2 ron  || rop (1)
+The circuit in Fig. 1 is a conventional CMOS differential amplifier used in analog circuits. The circuit is used to provide a voltage gain, which heavily depends on the output resistance of both PMOS and NMOS transistors. The output resistance in turn depends on channel length of MOSFET’s.
+                     ![fig](https://user-images.githubusercontent.com/100422485/156125878-1b597967-5b60-4adb-be74-0bfef146fbad.png)
 
 
 
 
 
 
-* **Reference Design**
+##  Differential Amplifier Design
 
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemioryRead/blob/main/Circuit%20Diagrams/reference_design.png?raw=true)
+* **Schematic of Differential Amplifier**
+![1Schematic](https://user-images.githubusercontent.com/100422485/156125851-10075a31-fff0-4a81-a1be-48322a9217ad.png)
 
-* **Reference Waveforms**
+* **Symbol of Differential Amplifier**
+![2symbol](https://user-images.githubusercontent.com/100422485/156125855-ce39e304-6703-4b0f-8e4d-c89447b31802.png)
+* **TestBench of Differential Amplifier**
+![3testbench](https://user-images.githubusercontent.com/100422485/156125860-f27af0a9-d665-4114-8807-64f1fed228d5.png)
 
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Waveforms/wavef.png?raw=true)
+## Waveforms
+* **Primewavewindow**
+![4Primewave window](https://user-images.githubusercontent.com/100422485/156125864-397a0af0-d8d8-4c63-93f0-6bf9db98de09.png)
 
+* **Transient Analysis**
+![6transientanalysis](https://user-images.githubusercontent.com/100422485/156125874-c0335b36-929a-461d-9404-c98c431097e8.png)
 
+* **A.C Ananlysis**
+![7acanalysis](https://user-images.githubusercontent.com/100422485/156127787-97ea63fb-ecbf-4d48-8bdc-3fda0ddcfea3.png)
 
-##  SRAM Cell Design
-
-The objective of SRAM cell design is to arrive at an optimal cell ratio and optimal pull up ratio. For performing a quick read operation, the cell current should be optimal so that bitline discharges within a given period of time. Signifying that the combination of passgate and pulldown should be less resistive. Also taking care of the bitline leakage when not doing any read operation, the minimum length of the technology is not used. Cell stability also becomes a very important factor so the pull downs should be Larger than the pass gate. So that the Vbump generated during read operation would be smaller than SNM and then we can accept more noise preventing any cell flip during read operation. For the same reason. Pass gates should be more resistive than pull down. Pull down should be large, but not too large. Also, the sizing of pull up devices becomes important in this case so as to complete the Write operation. To be Able to write into a cell the combination of Write driver and pass gate should be stronger than that of the pullup. Pullups are the weakest device of the SRAM cell. Pull up devices also need to be optimally sized so as to maintain the Writability and write speed of the SRAM cell. 
-
-So, the strength of the devices is in the following order Pulldown > Passgates > Pullup. 
-
-Length greater than minimum technology size is used to prevented any unwanted leakage.
-All the simulations are performed using Synopsys 28nm PDK and at TT 25 C.
-
-* **SRAM Circuit Diagram**
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Circuit%20Diagrams/SRAM_schematic.png?raw=true)
-
-
-
-* **Waveforms**
-
-* Internal Node Q/QB set to 0/1 leading to the discharge of BL.
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Waveforms/read_BL_dis.png?raw=true)
+* 
+* **D.C Analysis**
+![8dcanalysis](https://user-images.githubusercontent.com/100422485/156125877-86928f08-1f2b-44d7-aea0-043ec826037a.png)
 
 
-* Internal Node Q/QB set to 1/0 leading to the discharge of BLB.
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Waveforms/read_BLB_dis.png?raw=true)
-
-
-
-
-
-* **Sense Amplifier Circuit Diagram**
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Circuit%20Diagrams/Sense_schematic.png?raw=true)
-
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Waveforms/read1_s.png?raw=true)
-
-
-## Memory Read Operation
-
-
-For demonstrating the memory read operation, 6T SRAM cell is connected to a conventional last type sense amplifier via bitlines with a load of 100 fF representing the load of a column of bitcells . First, for demonstrating read 1, Node Q of the SRAM cell is initialized to a logic 0 which results in the discharge of BL and thus the offset appears at the SAF node of the sense amplifier. As soon as SEN (Sense Enable) signal is taken high SAF node discharges and SAT node is taken to VDD resulting in DOUT node to a logic 1.
-
-Similarly, for demonstrating the read 0 operation, QB node of the SRAM cell is initialized to the logic 0 which leads to the discharge of it BLB, Therefore the offset appears at the SAT node of the sense amplifier as soon as the SEN signal is taken high, the SAT node discharges SAF node is taken to VDD. Resulting in DOUT node of the latch to a logic 0. The DOUT node of the latch is connected to a buffer to drive a higher Output load of 10 fF. 
-
-
-
-
-* **Stimulus of various Signals are given as follows**
-
- - Wordline:
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Stimulus/BPCH.png?raw=true)
-
-
- - Bitline Precharge:
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Stimulus/WL.png?raw=true)
-
-
- - Precharge:
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Stimulus/PCH.png?raw=true)
-
-
- - Sense Enable:
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Stimulus/SEN.png?raw=true)
-
-
-* **Circuit Diagram for demonstrating Read Operation**
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Circuit%20Diagrams/Read_schematic.png?raw=true)
-
-
-* **Waveforms**
-
-* Internal Node Q/QB set to 1/0 leading to Read 0 operation.
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Waveforms/read0.png?raw=true)
-
-
-* Internal Node Q/QB set to 0/1 leading to Read 1 operation.
-
-![Reference Circuit Diagram](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead/blob/main/Waveforms/read1.png?raw=true)
 
 
 ## Netlist
 
 
+* **Netlist for Differential Amplifier**
+![5netlist](https://user-images.githubusercontent.com/100422485/156125865-478dcf3e-1dae-48aa-b9fc-f1db9e11a4b4.png)
 
-
-* **Netlist for Demostrating Read Operation**
 
 
 
