@@ -1,4 +1,4 @@
-# -CMOS-Differential-Amplifier-Circuit
+# CMOS-Differential-Amplifier-Circuit
 The CMOS Differential Amplifier is designed using 28nm CMOS technology by using Synopsys Custom Compiler
  
 
@@ -8,16 +8,16 @@ The CMOS Differential Amplifier is designed using 28nm CMOS technology by using 
 
 ## Contents
 
-* [ABSTRACT]
-* [INTRODUCTION]
-* [TOOLS USED]
-* [REFERNCE CIRCUIT DETAIL]
-* [DIFFERENTIAL AMPLIFIER DESIGN]
-* [WAVEFORMS]
-* [NETLIST]
-* [ACKNOWLEDGEMENT]
-* [AUTHOR]
-* [REFERENCE]
+* [Abstract]
+* [Introduction]
+* [Tools used]
+* [Reference circuit]
+* [Differential Amplifier Design]
+* [Waveforms]
+* [Netlist]
+* [Author]
+* [Ackwedgement]
+* [Reference]
 
 
 
@@ -28,7 +28,7 @@ The CMOS Differential Amplifier is designed using 28nm CMOS technology by using 
 This report presents a CMOS differential amplifier design with its corresponding A.C, D.C and Transient response. The advantage of differential operation over single ended operation is higher immunity to noise. The other advantage of differential amplifier is the increase in voltage swings. 
 
 
-## INTRODUCTION
+## Introduction
 
 Differential amplifier is one of the fundamental building blocks of analog circuit. It is generally used as the input part of an operational amplifier. It is used to provide high voltage gain and high common mode rejection ratio. It has other characteristics such as very high input impedance, very low offset voltage and very low input bias current. Differential amplifier can operate in two modes namely common mode and differential mode. Common mode type would result zero output and differential mode type would result high output. This shall mean the amplifier has high   common mode rejection ratio. 
 
@@ -70,6 +70,8 @@ The circuit in Fig. 1 is a conventional CMOS differential amplifier used in anal
  
  
 ![2symbol](https://user-images.githubusercontent.com/100422485/156125855-ce39e304-6703-4b0f-8e4d-c89447b31802.png)
+
+
 * **TestBench of Differential Amplifier**
 
 
@@ -86,17 +88,29 @@ The circuit in Fig. 1 is a conventional CMOS differential amplifier used in anal
 
 
 * **Primewavewindow**
+
+
 ![4Primewave window](https://user-images.githubusercontent.com/100422485/156125864-397a0af0-d8d8-4c63-93f0-6bf9db98de09.png)
 
+
 * **Transient Analysis**
+ 
+ 
 ![6transientanalysis](https://user-images.githubusercontent.com/100422485/156125874-c0335b36-929a-461d-9404-c98c431097e8.png)
 
+
 * **A.C Ananlysis**
+ 
+ 
 ![7acanalysis](https://user-images.githubusercontent.com/100422485/156127787-97ea63fb-ecbf-4d48-8bdc-3fda0ddcfea3.png)
 
 
 * **D.C Analysis**
+ 
+ 
 ![8dcanalysis](https://user-images.githubusercontent.com/100422485/156125877-86928f08-1f2b-44d7-aea0-043ec826037a.png)
+
+
 
 
 
@@ -109,8 +123,6 @@ The circuit in Fig. 1 is a conventional CMOS differential amplifier used in anal
 
 
 ![5netlist](https://user-images.githubusercontent.com/100422485/156125865-478dcf3e-1dae-48aa-b9fc-f1db9e11a4b4.png)
-
-
 
 
 
