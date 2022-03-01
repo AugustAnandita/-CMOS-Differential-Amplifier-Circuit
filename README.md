@@ -8,17 +8,16 @@ The CMOS Differential Amplifier is designed using 28nm CMOS technology by using 
 
 ## Contents
 
-* [Abstract](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead#abstract)
-* [Tools Used](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead#tools-used)
-* [Working](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead#working)
-* [SRAM Cell Design](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead#sram-cell-design)
-* [Sense Amplifier Design](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead#sense-amplifier-design)![Schematic](https://user-images.githubusercontent.com/100422485/156122845-cd1fb6bc-053b-4f3f-87d5-98d3cc7863dd.png)
-
-* [Netlist](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead#netlist)
-* [Author](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead#author)
-* [Acknowledgements](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead#acknowledgements)
-* [References](https://github.com/DebjitLP/CloudBased_Analog_Hackathon_MemoryRead#references)
-
+* [ABSTRACT]
+* [INTRODUCTION]
+* [TOOLS USED]
+* [REFERNCE CIRCUIT DETAIL]
+* [DIFFERENTIAL AMPLIFIER DESIGN]
+* [WAVEFORMS]
+* [NETLIST]
+* [ACKNOWLEDGEMENT]
+* [AUTHOR]
+* [REFERENCE]
 
 
 
@@ -50,7 +49,8 @@ Differential amplifier is one of the fundamental building blocks of analog circu
 
 
 The circuit in Fig. 1 is a conventional CMOS differential amplifier used in analog circuits. The circuit is used to provide a voltage gain, which heavily depends on the output resistance of both PMOS and NMOS transistors. The output resistance in turn depends on channel length of MOSFET’s.
-                     ![fig](https://user-images.githubusercontent.com/100422485/156125878-1b597967-5b60-4adb-be74-0bfef146fbad.png)
+
+![fig](https://user-images.githubusercontent.com/100422485/156125878-1b597967-5b60-4adb-be74-0bfef146fbad.png)
 
 
 
@@ -60,14 +60,31 @@ The circuit in Fig. 1 is a conventional CMOS differential amplifier used in anal
 ##  Differential Amplifier Design
 
 * **Schematic of Differential Amplifier**
+
+
 ![1Schematic](https://user-images.githubusercontent.com/100422485/156125851-10075a31-fff0-4a81-a1be-48322a9217ad.png)
 
+
+
 * **Symbol of Differential Amplifier**
+ 
+ 
 ![2symbol](https://user-images.githubusercontent.com/100422485/156125855-ce39e304-6703-4b0f-8e4d-c89447b31802.png)
 * **TestBench of Differential Amplifier**
+
+
 ![3testbench](https://user-images.githubusercontent.com/100422485/156125860-f27af0a9-d665-4114-8807-64f1fed228d5.png)
 
+
+
+
+
+
+
+
 ## Waveforms
+
+
 * **Primewavewindow**
 ![4Primewave window](https://user-images.githubusercontent.com/100422485/156125864-397a0af0-d8d8-4c63-93f0-6bf9db98de09.png)
 
@@ -77,7 +94,7 @@ The circuit in Fig. 1 is a conventional CMOS differential amplifier used in anal
 * **A.C Ananlysis**
 ![7acanalysis](https://user-images.githubusercontent.com/100422485/156127787-97ea63fb-ecbf-4d48-8bdc-3fda0ddcfea3.png)
 
-* 
+
 * **D.C Analysis**
 ![8dcanalysis](https://user-images.githubusercontent.com/100422485/156125877-86928f08-1f2b-44d7-aea0-043ec826037a.png)
 
@@ -88,6 +105,9 @@ The circuit in Fig. 1 is a conventional CMOS differential amplifier used in anal
 
 
 * **Netlist for Differential Amplifier**
+
+
+
 ![5netlist](https://user-images.githubusercontent.com/100422485/156125865-478dcf3e-1dae-48aa-b9fc-f1db9e11a4b4.png)
 
 
@@ -114,6 +134,7 @@ Anandita, National Institute of Technology, Patna
 ## References
 
 -[1]	B. Razavi, “Design of Analog CMOS Integrated Circuits,” McGraw-Hill Edition, 2001.
+
 -[2]	R. Jacob Baker, “CMOS: Circuit Design, Layout, and Simulation,”
  Wiley-IEEE Press, 2nd Edition, 2005.
 
