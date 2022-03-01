@@ -142,7 +142,7 @@ Anandita, National Institute of Technology, Patna
  - Synopsys India
  - [VSD VLSI System Design](https://www.vlsisystemdesign.com/)
  - Chinmay panda, IIT Hyderabad
- - Synopsis Team
+
  
 ## References
 
