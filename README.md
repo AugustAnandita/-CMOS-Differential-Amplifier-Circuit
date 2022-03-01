@@ -142,7 +142,8 @@ Anandita, National Institute of Technology, Patna
  - Synopsys India
  - [VSD VLSI System Design](https://www.vlsisystemdesign.com/)
  - Chinmay panda, IIT Hyderabad
- - Sameer Durgoji, NIT Karnataka
+ - Synopsis Team
+ 
 ## References
 
 -[1]	B. Razavi, “Design of Analog CMOS Integrated Circuits,” McGraw-Hill Edition, 2001.
